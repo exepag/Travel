@@ -9,7 +9,8 @@ import {
   StyleSheet,
   ActivityIndicator,
   Text,
-  View
+	View,
+	ScrollView
 } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchData } from './actions'
@@ -26,9 +27,11 @@ class Setup extends Component {
 		<View style={{flex:1}}>
 			<Banners />
 		</View>
-		<View style={{flex:3,backgroundColor:'peru'}}>
-			<Destinations />
-			<Reviewers />
+		<View style={{flex:3,backgroundColor:'gainsboro'}}>
+			<ScrollView>
+				<Destinations />
+				<Reviewers />
+			</ScrollView>	
 		</View>
 	</View>
     );
@@ -36,11 +39,11 @@ class Setup extends Component {
 }
 
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return {
-    data: state.data.items
-  }
-}
+//const mapStateToProps = (state) => {
+//  console.log(state)
+//  return {
+//    data: state.data.items
+//  }
+//}
 
 export default Setup
