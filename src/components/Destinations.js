@@ -55,30 +55,22 @@ class Destinations extends Component {
 			<View style={{marginTop:20,marginLeft:10,marginRight:0}}>
 				<Text style={{fontSize:18,fontWeight:'bold'}}>Top Destinations</Text>
 
-				{
-					this.props.daftar_destinasi.length > 0 ? (
+				{this.props.daftar_destinasi.length > 0 ? (
 
-				<ScrollView 
-							showHorizontalScrollIndicator={false}
-							horizontal={true}>
+					<ScrollView showHorizontalScrollIndicator={false} horizontal={true} >
 
-
-					{this.props.daftar_destinasi.map((data,index) => ( 
-					<Image 
-							key={index}
-							source={{uri:data.image}} 
-							style={{marginRight:3,
-									borderRadius:3,
-									width:100,
-									height:100,
-									resizeMode:'contain'
-							}} />
-					))}
-
+					{this.props.daftar_destinasi.map(
+						(data,index) => ( <Image key={index} source={{uri:data.image}} 
+									  style={{marginRight:3,
+										  borderRadius:3,
+										  width:100,
+										  height:100,
+										  resizeMode:'contain'}} /> )
+						)
+					}
 					
-					
-				</ScrollView>
-					) : null
+					</ScrollView>
+				    ) : null
 				}
 			</View>
 		);

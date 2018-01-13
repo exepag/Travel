@@ -100,6 +100,7 @@ export const reviewers = (state = {
 			}
 
 			case `${FETCH_REVIEWERS}_FULFILLED`:
+			console.log(action.payload.data)
 			return {
 				...state,
 				isFetching:false,

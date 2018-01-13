@@ -73,6 +73,7 @@ const ReviewersList = () => {
 	const url_reviewer = `${BASE_API_URL}/api/reviewer_lists`
 	return axios.get(url_reviewer)
 		.then(res=>{
+			console.log(res)
 			return res
 		})
 		.catch(err=>{
