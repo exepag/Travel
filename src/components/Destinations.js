@@ -59,15 +59,15 @@ class Destinations extends Component {
 
 					<ScrollView showHorizontalScrollIndicator={false} horizontal={true} >
 
-					{this.props.daftar_destinasi.map(
-						(data,index) => ( <Image key={index} source={{uri:data.image}} 
-									  style={{marginRight:3,
-										  borderRadius:3,
-										  width:100,
-										  height:100,
-										  resizeMode:'contain'}} /> )
-						)
-					}
+						{this.props.daftar_destinasi.map(
+							(data,index) => ( <Image key={index} source={{uri:data.image}} 
+										  style={{marginRight:3,
+											  borderRadius:3,
+											  width:100,
+											  height:100,
+											  resizeMode:'contain'}} /> )
+							)
+						}
 					
 					</ScrollView>
 				    ) : null
